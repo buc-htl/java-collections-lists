@@ -169,8 +169,10 @@ public class ListExamples {
         list.add("EVI");
         list.add("evi");
         System.out.println(list);              // [A, Y, C, B, D, Evi, EVI, evi]
-        Collections.sort(list, new MyStringComparator(true)); // descending
+        list.sort(new MyStringComparator(false));
         System.out.println(list);              // [A, B, C, D, evi, Evi, EVI, Y]
+        list.sort(null);  //using the natural order to sort the list
+        System.out.println(list);
     }
 
 
